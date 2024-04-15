@@ -10,7 +10,9 @@
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+          initialView: 'dayGridMonth',
+            events:'arie.ryuji@gmail.com',
+            googleCalendarApiKey: 'AIzaSyAS0-lroLFzZh2HmdezAFV3EE5JERfdFfo'
         });
         calendar.render();
       });
