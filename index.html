@@ -175,5 +175,25 @@
         calendar.render();
     });
     </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+    $('form').submit(function(event) {
+      event.preventDefault(); // フォームの通常の送信を防ぐ
+      var formData = new FormData(this); // フォームのデータを取得
+      $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbwyc3U-gzg5GWyaGvspRXgobbMobtBHnM-BgUBSDm2DmJhdDnemKKB2Fd5waho6PGNT/exec',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+          alert('送信完了!');
+        },
+        error: function(xhr, status, error) {
+          alert('送信エラー');
+        }
+      });
+    });
+    </script>
 </body>
 </html>
