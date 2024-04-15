@@ -129,16 +129,8 @@
          if (!liff.isLoggedIn()) {
            liff.login();
          }
-         const idToken = liff.getDecodedIDToken();
-         const userId = idToken.sub;
-         $('form').append(`<input type="hidden" name="userId" value="${userId}">`);
-         $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="送信">`);
        })
-   
-       $('form').submit(function( event ) {
-         event.preventDefault();
-         $.post( 'https://script.google.com/macros/s/AKfycbxwex2zVjlMjhjLjcNLHSJLyPO7j2D_RUsnnrCvWkcbX97C7gBhXCaYEhbc5lbh01pB/exec', $('form').serialize() );
-       });
+
      </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
